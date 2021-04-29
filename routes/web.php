@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\InicioController;
+use App\Http\Controllers\TareaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +25,5 @@ Route::get('/contacto', [InicioController::class, 'contacto']);
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::get('/tareas', [TareaController::class, 'index']);
